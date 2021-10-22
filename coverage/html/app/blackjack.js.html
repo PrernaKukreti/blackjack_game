@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/blackjack.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">app/</a> blackjack.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">98.08% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>153/156</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.26% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>83/89</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.92% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>141/144</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">44×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">38×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">67×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">67×</span>
+<span class="cline-any cline-yes">67×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-yes">34×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">60×</span>
+<span class="cline-any cline-yes">780×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">765×</span>
+<span class="cline-any cline-yes">765×</span>
+<span class="cline-any cline-yes">765×</span>
+<span class="cline-any cline-yes">765×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span></td><td class="text"><pre class="prettyprint lang-js">var blackjack = {
+  dealerStand: null,
+  dealerPoints: null,
+  dealerHand: null,
+  playerStand: null,
+  playerPoints: null,
+  playerHand: null,
+  hpcon: null,
+  deck: [], // The current deck of cards
+  dealer: [], // The dealer's current hand
+  player: [], // The player's current hand
+  dealerCurrentPoints: 0, // The dealer's current points
+  playerCurrentPoints: 0, // The player's current points
+  safety: 17, // Computer will stand on or past this point
+  dstand: false, // Dealer has stood
+  pstand: false, // Player has stood
+  turn: 0, // by default: 0 for player, 1 for dealer (computer)
+  dsymbols: ["&amp;hearts;", "&amp;diams;", "&amp;clubs;", "&amp;spades;"], // HTML symbols for cards
+  dnum: { 1: "A", 11: "J", 12: "Q", 13: "K" }, // Card numbers
+}
+function blackjackGame() {
+  /**This method is responsible for evaluating the dealer/player points
+   * Ace can be considered as 1 or 11 and face cards are 10 points
+   **/
+  this.calculatePoints = function () {
+    var aces = 0,
+      points = 0;
+    var result = blackjack.turn ? blackjack.dealer : blackjack.player;
+    result.forEach(function (i) {
+      if (i.n === 1) {
+        aces++;
+      } else if (i.n &gt;= 11 &amp;&amp; i.n &lt;= 13) {
+        points += 10;
+      } else {
+        points += i.n;
+      }
+    })
+    if (aces != 0) {
+      var minmax = [];
+      for (var elevens = 0; elevens &lt;= aces; elevens++) {
+        var calc = points + (elevens * 11) + (aces - elevens * 1);
+        minmax.push(calc);
+      }
+      points = minmax[0];
+      for (var i; i &lt; minmax.length; i++) {
+<span class="cstat-no" title="statement not covered" >        if (minmax[i] &gt; points &amp;&amp; minmax[i] &lt;= 21) {</span>
+<span class="cstat-no" title="statement not covered" >          points = minmax[i];</span>
+        }
+      }
+    }
+    if (blackjack.turn) {
+      blackjack.dealerCurrentPoints = points;
+    } else {
+      blackjack.playerCurrentPoints = points;
+      blackjack.playerPoints.innerHTML = points;
+    }
+  }
+&nbsp;
+  /**This method is responsible for calculating the points and finding the winner 
+   * 0 for player to win, 1 for dealer to win, 2 for tie
+   **/
+  this.check = function () {
+    var winner = null,
+      message = "";
+    if (blackjack.player.length === 2 &amp;&amp; blackjack.dealer.length === 2) { //Win on first go
+      if (blackjack.playerCurrentPoints === 21 &amp;&amp; blackjack.dealerCurrentPoints === 21) {
+        winner = 2;
+        message = "It's a tie with Blackjacks";
+      }
+      if (winner === null &amp;&amp; blackjack.playerCurrentPoints === 21) {
+        winner = 0;
+        message = "Player wins with a Blackjack!";
+      }
+      if (winner === null &amp;&amp; blackjack.dealerCurrentPoints === 21) {
+        winner = 1;
+        message = "Dealer wins with a Blackjack!";
+      }
+    }
+    if (winner === null) { // Win when hit new card
+      if (blackjack.playerCurrentPoints &gt; 21) {
+        winner = 1;
+        message = "Player has gone bust - Dealer wins!";
+      }
+      if (blackjack.dealerCurrentPoints &gt; 21) {
+        winner = 0;
+        message = "Dealer has gone bust - Player wins!";
+      }
+    }
+    if (winner === null &amp;&amp; blackjack.dstand &amp;&amp; blackjack.pstand) { // Win - when both players stand
+      // dealer wins
+      if (blackjack.dealerCurrentPoints &gt; blackjack.playerCurrentPoints) {
+        winner = 1;
+        message = "Dealer wins with " + blackjack.dealerCurrentPoints + " points!";
+      }
+      // Player wins
+      else if (blackjack.dealerCurrentPoints &lt; blackjack.playerCurrentPoints) {
+        winner = 0;
+        message = "Player wins with " + blackjack.playerCurrentPoints + " points!";
+      } else {
+        winner = 2;
+        message = "It's a tie.";
+      }
+    }
+    // Analysis of the winner
+    if (winner != null) {
+      // show dealer hand and message
+      blackjack.dealerPoints.innerHTML = blackjack.dealerCurrentPoints;
+      document.getElementById("deal-first").classList.add("show");
+      blackjack.hpcon.classList.remove("started");
+      alert(message);
+    }
+    return winner;
+  }
+  /**This method is responsible for drawing a card from the deck
+   * Taking out last card from the deck 
+   * Manage dealer/player card
+   **/
+  this.drawCard = function () {
+    var card = blackjack.deck.pop(),
+      cardh = document.createElement("div"),
+      cardv = (blackjack.dnum[card.n] ? blackjack.dnum[card.n] : card.n) + blackjack.dsymbols[card.s];
+    cardh.className = "blackjack-card"; cardh.innerHTML = cardv;
+    if (blackjack.turn) {
+      if (blackjack.dealer.length === 0) {
+        cardh.id = "deal-first";
+        cardh.innerHTML = '&lt;div class="back"&gt;?&lt;/div&gt;&lt;div class="front"&gt;' + cardv + '&lt;/div&gt;';
+      }
+      blackjack.dealer.push(card);
+      blackjack.dealerHand.appendChild(cardh);
+    } else {
+      blackjack.player.push(card);
+      blackjack.playerHand.appendChild(cardh);
+    }
+  }
+  //This method is responsible for dealer move in the game
+  this.blackjackDealerMove = function () {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (blackjack.turn) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (blackjack.dealerCurrentPoints &gt;= blackjack.safety) {
+<span class="cstat-no" title="statement not covered" >        stand();/</span>/Stand on the safety limit
+      } 
+      else {
+        hitAnotherDraw();
+      } //Draw the second card
+    }
+  }
+}
+var game = new blackjackGame(); //creating object of constructor function
+&nbsp;
+//This method is responsible for shuffling the deck and initial draw
+function startBlackjack() {
+  blackjack.deck = [];
+  blackjack.dealer = [];
+  blackjack.player = [];
+  blackjack.dealerCurrentPoints = 0;
+  blackjack.playerCurrentPoints = 0;
+  blackjack.dstand = false;
+  blackjack.pstand = false;
+  blackjack.dealerPoints.innerHTML = "?";
+  blackjack.playerPoints.innerHTML = 0;
+  blackjack.dealerHand.innerHTML = "";
+  blackjack.playerHand.innerHTML = "";
+  blackjack.dealerStand.classList.remove("stood");
+  blackjack.playerStand.classList.remove("stood");
+  blackjack.hpcon.classList.add("started");
+&nbsp;
+  //Shuffling the deck
+  for (var i = 0; i &lt; 4; i++) {
+    for (var j = 1; j &lt; 14; j++) {
+      blackjack.deck.push({s: i,n: j});
+    }
+  }
+  for (var i = blackjack.deck.length - 1; i &gt; 0; i--) {
+    var j = Math.floor(Math.random() * i);
+    var temp = blackjack.deck[i];
+    blackjack.deck[i] = blackjack.deck[j];
+    blackjack.deck[j] = temp;
+  }
+  //Draw initial 4 cards
+  blackjack.turn = 0; game.drawCard();
+  blackjack.turn = 1; game.drawCard();
+  blackjack.turn = 0; game.drawCard();
+  blackjack.turn = 1; game.drawCard();
+&nbsp;
+  //Lucky 21 on initial draw
+  blackjack.turn = 0; game.calculatePoints();
+  blackjack.turn = 1; game.calculatePoints();
+  var winner = game.check();
+  if (winner === null) {
+    blackjack.turn = 0;
+  }
+}
+&nbsp;
+/**This method is responsible for calculating the points and finding the winner 
+ * 0 for player to win, 1 for dealer to win, 2 for tie
+ **/
+function hitAnotherDraw() {
+  game.drawCard(); game.calculatePoints(); //Draw new card 
+  //Auto stand on 21 points
+  if (blackjack.turn === 0 &amp;&amp; blackjack.playerCurrentPoints === 21 &amp;&amp; !blackjack.pstand) {
+    blackjack.pstand = true;
+    blackjack.playerStand.classList.add("stood");
+  }
+  if (blackjack.turn === 1 &amp;&amp; blackjack.dealerCurrentPoints === 21 &amp;&amp; !blackjack.dstand) {
+    blackjack.dstand = true;
+    blackjack.dealerStand.classList.add("stood");
+  }
+  //continue game if no winner
+  var winner = game.check();
+  if (winner === null) {
+    nextTurn();
+  }
+}
+&nbsp;
+/**This method is responsible for setting the status
+ * Continue playing or not
+ **/
+function stand() {
+  if (blackjack.turn) {
+    blackjack.dstand = true; blackjack.dealerStand.classList.add("stood");
+  } else {
+    blackjack.pstand = true; blackjack.playerStand.classList.add("stood");
+  }
+  var winner = (blackjack.pstand &amp;&amp; blackjack.dstand) ? game.check() : null;
+  if (winner === null) nextTurn();
+}
+&nbsp;
+/**This method is responsible for giving turn between player and dealer
+ * Managing the dealer best move
+ **/
+function nextTurn() {
+  blackjack.turn = blackjack.turn === 0 ? 1 : 0; //Dealer is next
+  if (blackjack.turn === 1) {
+    if (blackjack.dstand)
+      blackjack.turn = 0; //Skip dealer turn when stood
+    else 
+      game.blackjackDealerMove();
+  }
+  //Player is next
+  else {
+    if (blackjack.pstand) {
+      blackjack.turn = 1; game.blackjackDealerMove();
+    } //Skip player if stood
+  }
+}
+&nbsp;
+//This method is responsible for initializing the HTML elements of the game
+function initializingGame() {
+  blackjack.dealerStand = document.getElementById("dealer-stand");
+  blackjack.dealerPoints = document.getElementById("dealer-points");
+  blackjack.dealerHand = document.getElementById("dealer-cards");
+  blackjack.playerStand = document.getElementById("player-stand");
+  blackjack.playerPoints = document.getElementById("player-points");
+  blackjack.playerHand = document.getElementById("player-cards");
+  blackjack.hpcon = document.getElementById("play-control");
+  document.getElementById("blackjack-start").addEventListener("click", startBlackjack);
+  document.getElementById("blackjack-hit").addEventListener("click", hitAnotherDraw);
+  document.getElementById("blackjack-stand").addEventListener("click", stand);
+}
+window.addEventListener("DOMContentLoaded", initializingGame);</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Oct 22 2021 11:16:57 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

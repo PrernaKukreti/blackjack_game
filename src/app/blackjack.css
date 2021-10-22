@@ -1,0 +1,80 @@
+/* (A) SHARED */
+/* (A1) CONTAINERS */
+.game {
+  width: 800px;
+  border: solid 1px #ddd;
+  margin: 0 auto;
+  background-image:url(../assets/blackjack-image.png);
+  border: solid 2px;
+  text-align: center;
+  min-height: 475px;
+}
+
+h3{
+  color: white;
+}
+
+#dealer-wrap, #player-wrap {
+  padding: 10px;
+  min-height: 150px;
+}
+#dealer-data, #player-data {
+  padding: 10px;
+  color: #333;
+}
+#dealer-stand, #player-stand {
+  display: none;
+  padding: 5px;
+  background: #ab2323;
+  color: #fff;
+}
+#dealer-stand.stood, #play-stand.stood { display: inline-block; }
+
+/* (A2) CARDS */
+#dealer-cards, #player-cards {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  padding: 10px;
+}
+.blackjack-card {
+  box-sizing: border-box;
+  font-size: 2em;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #eaeaea;
+}
+
+/* (B) DEALER'S CARDS */
+#dealer-wrap { background: rgba(255,255,255,0.5);}
+#dealer-data { background: rgba(255,255,255,0.5); }
+#deal-first .front { display: none; }
+#deal-first.show .back { display: none; }
+#deal-first.show .front { display: block; }
+
+/* (C) PLAYER'S CARDS */
+#player-wrap { background: rgba(255,255,255,0.5); }
+#player-data { background: rgba(255,255,255,0.5); }
+
+/* (D) PLAY CONTROLS */
+#play-control {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 10px;
+  padding: 30px;
+}
+#play-control input {
+  box-sizing: border-box;
+  cursor: pointer;
+  border: 0;
+  padding: 10px 0;
+  background: #4381de;
+  color: #fff;
+  width: 100%;
+}
+#blackjack-hit, #blackjack-stand { display: none; }
+#play-control.started { grid-template-columns: 50% 50%; }
+#play-control.started #blackjack-start { display: none; }
+#play-control.started #blackjack-hit, #play-control.started #blackjack-stand { display: block; }
